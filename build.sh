@@ -96,7 +96,6 @@ echo "Building and tagging Docker images..."
 echo ""
 # Build the sentry onpremise image first as it is needed for the cron image
 $dc pull --ignore-pull-failures
-docker pull ${SENTRY_IMAGE:-getsentry/sentry:latest}
 $dc build --force-rm web
 $dc build --force-rm --parallel
 echo ""
